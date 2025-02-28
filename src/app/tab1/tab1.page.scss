@@ -1,49 +1,155 @@
 :root {
-    --ion-background-color: linear-gradient(to bottom, #0D1B66, #000);
-    --ion-text-color: white;
+  --ion-background-light: #ffffff;
+  --ion-text-light: #000000;
+  --ion-background-dark: #0D1B66;
+  --ion-text-dark: white;
+  --ion-accent-color: #4A90E2;
+  --ion-hover-color: #357ABD;
+  --ion-input-background-light: rgba(0, 0, 0, 0.05);
+  --ion-input-background-dark: rgba(255, 255, 255, 0.15);
+  --ion-input-focus-light: rgba(0, 0, 0, 0.1);
+  --ion-input-focus-dark: rgba(255, 255, 255, 0.25);
+}
+
+body {
+  --ion-background-color: var(--ion-background-light);
+  --ion-text-color: var(--ion-text-light);
+  --ion-input-background: var(--ion-input-background-light);
+  --ion-input-focus: var(--ion-input-focus-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-background-color: var(--ion-background-dark);
+    --ion-text-color: var(--ion-text-dark);
+    --ion-input-background: var(--ion-input-background-dark);
+    --ion-input-focus: var(--ion-input-focus-dark);
   }
-  
-  ion-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    height: 100vh;
-    background: var(--ion-background-color);
-    color: var(--ion-text-color);
+}
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--ion-background-color);
+  color: var(--ion-text-color);
+  animation: fadeIn 0.8s ease-in-out;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-container {
+  background: var(--ion-input-background);
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
   .login-container {
-    width: 300px;
+    background: var(--ion-input-background);
   }
-  
+}
+
+.login-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+.user-icon {
+  font-size: 5rem;
+  color: var(--ion-text-color);
+  margin-bottom: 20px;
+}
+
+.input-container {
+  background: var(--ion-input-background);
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.input-container:focus-within {
+  background: var(--ion-input-focus);
+}
+
+ion-input {
+  color: var(--ion-text-color);
+}
+
+ion-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.login-button {
+  background: linear-gradient(to right, var(--ion-accent-color), var(--ion-hover-color));
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, var(--ion-hover-color), var(--ion-accent-color));
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.forgot-password {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--ion-text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--ion-accent-color);
+}
+
+.toggle-password {
+  cursor: pointer;
+  color: var(--ion-text-color);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 25px;
+    max-width: 90%;
+  }
+
   .user-icon {
     font-size: 4rem;
-    margin: 20px 0;
   }
-  
-  ion-item {
-    background: #444;
-    border-radius: 5px;
-    margin: 10px 0;
-  }
-  
-  ion-input {
-    color: white;
-  }
-  
-  ion-button {
-    background: #666;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  ion-tab-bar {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  ion-tab-button {
-    color: white;
-  }
-  
+}
