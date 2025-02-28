@@ -1,0 +1,7 @@
+{
+  "name": "WM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

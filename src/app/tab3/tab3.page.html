@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Estadísticas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Estadísticas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="statistics-container">
+    <div class="month-selector">
+      <ion-button fill="clear">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <span>Febrero</span>
+      <ion-button fill="clear">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="chart-container">
+      <canvas id="visitsChart"></canvas>
+    </div>
+    <div class="demographic-info">
+      <ion-label>Perfil demográfico de visitantes: Estado y Sexo</ion-label>
+      <div class="pie-charts">
+        <canvas id="stateChart"></canvas>
+        <canvas id="genderChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

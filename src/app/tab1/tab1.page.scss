@@ -1,0 +1,49 @@
+:root {
+    --ion-background-color: linear-gradient(to bottom, #0D1B66, #000);
+    --ion-text-color: white;
+  }
+  
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--ion-background-color);
+    color: var(--ion-text-color);
+  }
+  
+  .login-container {
+    width: 300px;
+  }
+  
+  .user-icon {
+    font-size: 4rem;
+    margin: 20px 0;
+  }
+  
+  ion-item {
+    background: #444;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  ion-input {
+    color: white;
+  }
+  
+  ion-button {
+    background: #666;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  ion-tab-bar {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  ion-tab-button {
+    color: white;
+  }
+  

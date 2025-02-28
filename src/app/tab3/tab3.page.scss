@@ -1,0 +1,64 @@
+:root {
+    --ion-background-color: linear-gradient(to bottom, #0D1B66, #000);
+    --ion-text-color: white;
+}
+
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: var(--ion-background-color);
+    color: var(--ion-text-color);
+}
+
+.statistics-container {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.month-selector ion-button {
+    color: white;
+}
+
+.chart-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.demographic-info {
+    background: #444;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.pie-charts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.pie-charts canvas {
+    width: 45%;
+    height: 150px;
+}
+
+ion-tab-bar {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+ion-tab-button {
+    color: white;
+}
