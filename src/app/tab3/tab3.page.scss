@@ -1,64 +1,58 @@
-:root {
-    --ion-background-color: linear-gradient(to bottom, #0D1B66, #000);
-    --ion-text-color: white;
-}
-
-ion-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    background: var(--ion-background-color);
-    color: var(--ion-text-color);
-}
-
 .statistics-container {
-    width: 90%;
-    margin-top: 20px;
+  text-align: center;
+  padding: 16px;
 }
 
 .month-selector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.month-selector ion-button {
-    color: white;
-}
-
+/* Mejora el tamaño del gráfico de visitas */
 .chart-container {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 350px; /* Aumentamos el alto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Contenedor de los gráficos de pastel */
 .demographic-info {
-    background: #444;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    color: white;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .pie-charts {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Permite que se acomoden mejor en pantallas pequeñas */
 }
 
+/* Aumentamos el tamaño de los gráficos de pastel */
 .pie-charts canvas {
-    width: 45%;
-    height: 150px;
+  width: 180px !important;
+  height: 180px !important;
+  display: block;
 }
 
-ion-tab-bar {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-ion-tab-button {
-    color: white;
+/* Fondo para la leyenda */
+.legend-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 5px;
 }

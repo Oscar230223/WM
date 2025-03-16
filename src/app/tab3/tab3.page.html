@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Estadísticas
-    </ion-title>
+    <ion-title>Estadísticas</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,6 +12,8 @@
   </ion-header>
 
   <div class="statistics-container">
+    
+    <!-- Selector de mes -->
     <div class="month-selector">
       <ion-button fill="clear">
         <ion-icon name="chevron-back-outline"></ion-icon>
@@ -23,9 +23,13 @@
         <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-button>
     </div>
+
+    <!-- Gráfico de visitas -->
     <div class="chart-container">
       <canvas id="visitsChart"></canvas>
     </div>
+
+    <!-- Perfil demográfico -->
     <div class="demographic-info">
       <ion-label>Perfil demográfico de visitantes: Estado y Sexo</ion-label>
       <div class="pie-charts">
@@ -33,6 +37,6 @@
         <canvas id="genderChart"></canvas>
       </div>
     </div>
-  </div>
 
+  </div>
 </ion-content>
