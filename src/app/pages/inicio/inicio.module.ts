@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, Routes } from '@angular/router';
-
-import { Tab1Page } from './tab1.page';
+import { InicioPage } from './inicio.page'; // ✅ Importamos InicioPage en lugar de declararlo
 
 const routes: Routes = [
   {
     path: '',
-    component: Tab1Page
+    component: InicioPage
   }
 ];
 
@@ -18,8 +17,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes) // ✅ Se asegura de que Tab1 tenga su ruta definida
-  ],
-  declarations: [Tab1Page]
+    RouterModule.forChild(routes),
+    InicioPage // ✅ Importamos InicioPage aquí, porque es standalone
+  ]
 })
-export class Tab1PageModule {}
+export class InicioPageModule {}
