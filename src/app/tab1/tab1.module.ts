@@ -1,25 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { RouterModule, Routes } from '@angular/router';
-
-import { Tab1Page } from './tab1.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: Tab1Page
+    loadComponent: () => import('./tab1.page').then(m => m.Tab1Page) // ✅ Importación correcta para standalone
   }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes) // ✅ Se asegura de que Tab1 tenga su ruta definida
-  ],
-  declarations: [Tab1Page]
+  imports: [RouterModule.forChild(routes)], // ✅ Solo importa RouterModule
 })
 export class Tab1PageModule {}
+
