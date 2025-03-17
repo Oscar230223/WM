@@ -33,10 +33,10 @@ export class Tab2Page {
       data: {
         labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
         datasets: [{
-          label: 'Visitas por Hora',
+          label: 'Visitas por hora',
           data: [5, 10, 7, 15, 12, 20, 25, 18, 22, 30, 35, 40],
-          backgroundColor: 'rgba(75, 192, 192, 0.6)',  // Color de las barras
-          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgb(255, 255, 255)',  // Color de las barras
+          borderColor: 'rgb(255, 255, 255)',
           borderWidth: 1
         }]
       },
