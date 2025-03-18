@@ -1,42 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Dashboard
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div class="dashboard-container">
-    <div class="stats">
-      <div class="stat-box">
-        <ion-icon name="eye-outline"></ion-icon>
-        <span>59</span>
+  <ion-content [fullscreen]="true">
+    <div class="dashboard-container">
+      <!-- Título -->
+      <br>
+      <h1 class="dashboard-title">Dashboard</h1>
+  
+      <!-- Estadísticas -->
+      <div class="stats">
+        <div class="stat-box">
+          <div class="stat-content">
+            <img src="assets/icon/eye.png" alt="User Icon" class="icon">
+            <span class="stat-value">59</span>
+          </div>
+        </div>
+        <div class="stat-box">
+          <span>Visitas del día</span>
+        </div>
       </div>
-      <div class="stat-box">
-        <span>Visitas del día</span>
+  
+      <!-- Fecha y Hora -->
+      <div class="date-time">
+        <ion-item>
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          <ion-label>Día: 18/03/2025</ion-label>
+        </ion-item>
+        <div class="separator"></div>
+        <ion-item>
+          <ion-icon name="time-outline" slot="start"></ion-icon>
+          <ion-label>Hora: 12:00</ion-label>
+        </ion-item>
+      </div>
+  
+      <!-- Contenedor del gráfico (el tuyo) -->
+      <div class="chart-container">
+        <canvas id="visitsChart"></canvas>
       </div>
     </div>
-    <div class="date-time">
-      <ion-item>
-        <ion-icon name="calendar-outline" slot="start"></ion-icon>
-        <ion-label>Día: 18 Marzo 2025</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="time-outline" slot="start"></ion-icon>
-        <ion-label>Hora: 12:00</ion-label>
-      </ion-item>
-    </div>
-    
-    <!-- Contenedor del gráfico -->
-    <div class="chart-container">
-      <canvas id="visitsChart"></canvas>
-    </div>    
-  </div>
-</ion-content>
+  </ion-content>
+  

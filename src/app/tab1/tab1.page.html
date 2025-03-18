@@ -1,25 +1,4 @@
-<ion-header [translucent]="true">
-    <ion-toolbar><ion-header [translucent]="true">
-        <ion-toolbar>
-          <ion-title>Perfil</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      
-      <ion-content class="tab1-page">
-        <div class="profile-container">
-          <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
-          <h2>Admin</h2>
-          <p>Correo electrónico:</p>
-          <p class="email-text">{{ email }}</p>
-          <ion-button expand="full" (click)="logout()">Cerrar sesión</ion-button>
-        </div>
-      </ion-content>
-      
-      <ion-title>Perfil</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content class="tab1-page">
+  <!--ion-content class="tab1-page">
     <div class="profile-container">
       <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
       <h2>Admin</h2>
@@ -27,5 +6,15 @@
       <p class="email-text">{{ email }}</p>
       <ion-button expand="full" (click)="logout()">Cerrar sesión</ion-button>
     </div>
-  </ion-content>
+  </ion-content-->
   
+  
+  <ion-content class="profile-page">
+    <div class="profile-container">
+      <img src="assets/icon/circle-user.png" alt="User Icon" class="icon">
+      <h2>Admin</h2>
+      <p class="correo">Correo electrónico:</p>
+      <p class="email-text">{{email}}</p>
+      <ion-button expand="full" (click)="logout()">Cerrar sesión</ion-button>
+    </div>
+  </ion-content>

@@ -37,10 +37,10 @@ export class Tab3Page {
       data: {
         labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
         datasets: [{
-          label: 'Visitas por Hora',
+          label: 'Visitas por hora',
           data: [5, 10, 7, 15, 12, 20, 25, 18, 22, 30, 35, 40],
-          backgroundColor: 'rgba(255, 99, 132, 0.6)',  // Color de barras
-          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgb(255, 255, 255)',  // Color de barras
+          borderColor: 'rgb(255, 255, 255)',
           borderWidth: 1
         }]
       },
@@ -75,7 +75,15 @@ export class Tab3Page {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'right', //position name label
+            labels: {
+              color: 'white' //color labels
+            }
+          }
+        }
       }
     });
   }
@@ -99,7 +107,15 @@ export class Tab3Page {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'right', //position name label
+            labels: {
+              color: 'white' //color labels
+            }
+          }
+        }
       }
     });
   }
