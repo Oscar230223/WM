@@ -21,14 +21,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: 'tab1', // ✅ Redirigir a tab1 dentro de /tabs
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/tab1',
+    path: '**',
+    redirectTo: 'tabs', // ✅ Redirigir a /tabs si no hay una ruta específica
     pathMatch: 'full'
   }
 ];
