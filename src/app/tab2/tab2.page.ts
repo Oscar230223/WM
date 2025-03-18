@@ -34,7 +34,7 @@ export class Tab2Page {
         labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
         datasets: [{
           label: 'Visitas por hora',
-          data: [5, 10, 7, 15, 12, 20, 25, 18, 22, 30, 35, 40],
+          data: [0, 0, 0, 2, 5, 6, 12,],
           backgroundColor: 'rgb(255, 255, 255)',  // Color de las barras
           borderColor: 'rgb(255, 255, 255)',
           borderWidth: 1

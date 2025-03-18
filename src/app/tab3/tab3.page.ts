@@ -35,10 +35,10 @@ export class Tab3Page {
     this.visitsChart = new Chart(ctx, {
       type: 'bar',  // 📊 GRÁFICO DE BARRAS EN VEZ DE LÍNEAS
       data: {
-        labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+        labels: ['05', '10', '15', '20', '25','31'],
         datasets: [{
-          label: 'Visitas por hora',
-          data: [5, 10, 7, 15, 12, 20, 25, 18, 22, 30, 35, 40],
+          label: 'Visitas por mes',
+          data: [20, 50, 75, 110, 150, 200],
           backgroundColor: 'rgb(255, 255, 255)',  // Color de barras
           borderColor: 'rgb(255, 255, 255)',
           borderWidth: 1
